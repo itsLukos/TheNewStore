@@ -1,19 +1,16 @@
 import React, { useEffect, useState } from "react";
+import Product from "./Product";
 
 
 
-const List = ( {productList} ) => {
+const List = ( { productList } ) => {
 
 
     return (
         <>
             <ul>
                 { productList.map((item) => (
-                    <li>
-                        <h2>{item.title}</h2>
-                        <img src={item.img} alt="" />
-                        <p>Precio en €: {item.price}</p>
-                    </li>))}
+                    <Product item={item} />))}
             </ul>
 
         </>
