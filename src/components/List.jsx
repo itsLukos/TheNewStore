@@ -1,23 +1,19 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios"
 
 
-const List = () => {
 
-    const [productList, setProductList] = useState([]);
-    useEffect(() => {
-        axios.get("https://fakestoreapi.com/products")
-        .then((resp) => {
-            console.log(resp.data);
-            setProductList(resp.data);
-        });
+const List = ( {productList} ) => {
 
-    }, []);
 
     return (
         <>
             <ul>
-                { productList.map((item) => (<li>{item.title}</li>))}
+                { productList.map((item) => (
+                    <li>
+                        <h2>{item.title}</h2>
+                        <img src={item.img} alt="" />
+                        <p>Precio en €: {item.price}</p>
+                    </li>))}
             </ul>
 
         </>
