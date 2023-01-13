@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios"
-import getDataApi from "../services/api.js";
+/*import getDataApi from "../services/api.js";*/
 import List from "./List.jsx"
 import '../styles/App.css';
 

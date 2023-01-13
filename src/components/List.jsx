@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React  from "react";
 import Product from "./Product";
 
 
@@ -10,7 +10,7 @@ const List = ( { productList } ) => {
         <>
             <ul>
                 { productList.map((item) => (
-                    <Product item={item} />))}
+                    <Product item={item} key={item.id}/>))}
             </ul>
 
         </>
