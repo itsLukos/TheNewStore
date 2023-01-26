@@ -44,12 +44,10 @@ function App() {
               <Route path="*" element={<Page404 />}/>
             </Routes>
         </BrowserRouter>
+        <h1>Mi tienda de ropa y complementos</h1>
+        <List />
+        <Contact />
       </ProductContext.Provider>
-
-      <h1>Mi tienda de ropa y complementos</h1>
-      <Contact />
-      <List productList ={productList} />
-     
     </>
 
   );
