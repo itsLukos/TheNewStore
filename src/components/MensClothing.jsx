@@ -1,15 +1,20 @@
-import React from "react";
+import React, {useContext} from "react";
+import ProductContext from "../usecontext/ProductContext";
+import Product from "./Product";
 
-function MensClothing ( {item} ) {
+function MensClothing () {
 
+    const list = useContext(ProductContext);
 
     return (
-    <li >
-            <h2>{item.title}</h2>
-            <img src={item.image} alt="" />
-            <p>Precio en €: {item.price}</p>
-        </li>
-    );    
+        <>
+            <ul>
+                { list.filter(i => i.category == "men's clothing").map((item) => (
+                    <Product item={item} key={item.id}/>))}
+            </ul>
+
+        </>
+    );   
 }
 
 export default MensClothing;
