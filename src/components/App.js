@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios"
-/*import getDataApi from "../services/api.js";*/
 import List from "./List.jsx"
 import Electronics from "./Electronics"
 import Jewelery from "./Jewelery"
@@ -33,9 +32,11 @@ function App() {
   return (
     <>
       <ProductContext.Provider value={productList}>
-        <BrowserRouter>
+      <BrowserRouter>
+        <NavBar />
+        <h1>Mi tienda de ropa y complementos</h1>
             <Routes>
-              <Route element={<NavBar />} path="/"/>
+              <Route element={<List />} path="/"/>
               <Route path="/list" element={<List />} />
               <Route element={<Electronics />} path="/Electronics"/> 
               <Route element={<Jewelery />} path="/Jewelery"/>
@@ -44,8 +45,6 @@ function App() {
               <Route path="*" element={<Page404 />}/>
             </Routes>
         </BrowserRouter>
-        <h1>Mi tienda de ropa y complementos</h1>
-        <List />
         <Contact />
       </ProductContext.Provider>
     </>
