@@ -49,7 +49,7 @@ function Contact () {
                     <input type="email" id="email"  placeholder="correo@correo.com" onChange={handleChange}/>
                 </div>
                 <div>
-                    <label htmlFor="msg"></label>
+                    <label htmlFor="msg">Mensaje</label>
                     <input type="text" id="msg" placeholder="Escriba su mensaje" onChange={handleChange}/>
                 </div>
                 <div>

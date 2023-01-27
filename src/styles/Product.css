@@ -1,0 +1,23 @@
+.box {
+    list-style: none;
+    display: inline-flex;
+    border-radius: 10px;
+    border: 10px solid  rgb(89, 210, 232);
+    overflow: hidden;
+    width: 20%;
+    height: 100%;
+    padding: 20px;
+    margin: 20px;
+}
+.box:hover {
+    border: 10px solid  #dd95eb;
+}
+
+.item {
+    height: 500px;
+}
+
+.item img  {
+    max-height: 70%;
+    max-width: 100%;
+}

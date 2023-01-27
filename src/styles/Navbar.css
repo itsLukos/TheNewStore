@@ -1,0 +1,21 @@
+.bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 25px;
+    margin-bottom: 25px;
+    background-color: black;
+    font-size: xx-large;
+}
+
+.bar li {
+    display: inline;
+    padding: 15px;
+    margin: 25px;
+  }
+  a:link {
+    text-decoration: none;
+  }
+  a:visited {
+    text-decoration: none;
+  }
+   
